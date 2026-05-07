@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+<div id="progress"></div>
+<canvas id="canvas"></canvas>
+<div class="right-bar"></div>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+  <a href="https://github.com/AsmiSingh26" title="GitHub">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.73.083-.73 1.205.085 1.84 1.237 1.84 1.237 1.07 1.834 2.807 1.304 3.492.997.108-.775.418-1.305.762-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 21.795 24 17.295 24 12c0-6.63-5.37-12-12-12z"/></svg>
+  </a>
+  <a href="https://www.linkedin.com/in/asmi-singh-75781527b/" title="LinkedIn">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+  </a>
+  <a href="mailto:asmisingh21@gmail.com" title="Email">
+    <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+  </a>
+</div>
+
+<!-- NAV -->
+<nav>
+  <a class="logo" href="#hero">ASMI</a>
+  <ul class="nav-links">
+    <li><a href="#hero" class="active">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#positions">Leadership</a></li>
+    <li><a href="#certifications">Certs</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-tag reveal">Available for work</div>
+    <h1 class="hero-greeting reveal">Hi, I'm <span class="name">Asmi Singh</span></h1>
+    <div class="hero-role reveal"><span id="typed"></span><span class="cursor"></span></div>
+<p class="hero-desc reveal">
+Computer Science student at VIT Chennai focused on full-stack development, AI-based applications, and building impactful real-world projects.
+</p>
+    <div class="hero-btns reveal">
+      <a href="#projects" class="btn-green">View Work</a>
+      <a href="resume.pdf" class="btn-green" download>Download Resume</a>
+    </div>
+    <div class="stats-row reveal">
+      <div class="stat"><div class="stat-num" data-count="5">0</div><div class="stat-label">Projects</div></div>
+      <div class="stat"><div class="stat-num" data-count="3">0</div><div class="stat-label">Years Learning</div></div>
+      <div class="stat"><div class="stat-num" data-count="10">0</div><div class="stat-label">Technologies</div></div>
+    </div>
+  </div>
+            <!-- GIRL BITMOJI AVATAR -->
+    <div class="hero-right reveal from-right">
+      <div class="avatar-wrap">
+        <div class="avatar-glow"></div>
+        <div class="avatar-ring"></div>
+        <div class="avatar-ring2"></div>
+        <div class="avatar-svg-wrap">
+          <svg viewBox="0 0 280 280" xmlns="http://www.w3.org/2000/svg" width="280" height="280">
+            <defs>
+              <radialGradient id="bgG" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#0a2010"/>
+                <stop offset="100%" stop-color="#030f06"/>
+              </radialGradient>
+              <radialGradient id="skinG" cx="40%" cy="35%" r="60%">
+                <stop offset="0%" stop-color="#f5c89a"/>
+                <stop offset="100%" stop-color="#e0a070"/>
+              </radialGradient>
+              <radialGradient id="shirtG" cx="50%" cy="30%" r="70%">
+                <stop offset="0%" stop-color="#00dd77"/>
+                <stop offset="100%" stop-color="#005533"/>
+              </radialGradient>
+              <radialGradient id="hairG" cx="50%" cy="30%" r="60%">
+                <stop offset="0%" stop-color="#3d1a00"/>
+                <stop offset="100%" stop-color="#1a0800"/>
+              </radialGradient>
+            </defs>
+ 
+            <!-- Background -->
+            <rect width="280" height="280" fill="url(#bgG)"/>
+            <circle cx="140" cy="140" r="110" fill="none" stroke="rgba(0,255,136,0.05)" stroke-width="1"/>
+            <circle cx="140" cy="140" r="70" fill="none" stroke="rgba(0,255,136,0.04)" stroke-width="1"/>
+            <line x1="0" y1="140" x2="280" y2="140" stroke="rgba(0,255,136,0.04)" stroke-width="1"/>
+            <line x1="140" y1="0" x2="140" y2="280" stroke="rgba(0,255,136,0.04)" stroke-width="1"/>
+ 
+            <!-- BODY / TOP -->
+            <ellipse cx="140" cy="252" rx="65" ry="42" fill="url(#shirtG)"/>
+            <!-- Shirt neckline -->
+            <path d="M118,208 Q140,228 162,208" fill="#004422" stroke="none"/>
+            <!-- Shirt bow/detail -->
+            <polygon points="132,218 140,226 148,218 144,214 140,222 136,214" fill="#00ff88" opacity="0.7"/>
+ 
+            <!-- NECK -->
+            <rect x="130" y="192" width="20" height="20" rx="6" fill="url(#skinG)"/>
+ 
+            <!-- LONG HAIR BACK (behind head) -->
+            <ellipse cx="140" cy="185" rx="58" ry="80" fill="url(#hairG)" opacity="0.9"/>
+            <!-- Hair sides flowing down -->
+            <path d="M88,140 Q72,200 85,248" stroke="#2a1000" stroke-width="22" fill="none" stroke-linecap="round" opacity="0.9"/>
+            <path d="M192,140 Q208,200 195,248" stroke="#2a1000" stroke-width="22" fill="none" stroke-linecap="round" opacity="0.9"/>
+ 
+            <!-- HEAD -->
+            <ellipse cx="140" cy="158" rx="52" ry="58" fill="url(#skinG)"/>
+ 
+            <!-- EARS -->
+            <ellipse cx="90" cy="162" rx="8" ry="11" fill="#d4905a"/>
+            <ellipse cx="190" cy="162" rx="8" ry="11" fill="#d4905a"/>
+            <!-- Earrings (star shape) -->
+            <circle cx="90" cy="174" r="4" fill="#00ff88" opacity="0.9"/>
+            <circle cx="190" cy="174" r="4" fill="#00ff88" opacity="0.9"/>
+            <circle cx="90" cy="174" r="2" fill="white" opacity="0.6"/>
+            <circle cx="190" cy="174" r="2" fill="white" opacity="0.6"/>
+ 
+            <!-- HAIR TOP -->
+            <ellipse cx="140" cy="108" rx="54" ry="24" fill="url(#hairG)"/>
+            <ellipse cx="140" cy="100" rx="50" ry="18" fill="#2a1000"/>
+            <!-- Hair center part -->
+            <path d="M140,88 Q140,105 140,118" stroke="#1a0800" stroke-width="2" fill="none"/>
+            <!-- Hair waves / volume -->
+            <path d="M90,112 Q100,95 120,105 Q130,100 140,96" stroke="#2a1000" stroke-width="8" fill="none" stroke-linecap="round"/>
+            <path d="M190,112 Q180,95 160,105 Q150,100 140,96" stroke="#2a1000" stroke-width="8" fill="none" stroke-linecap="round"/>
+            <!-- Hair highlight -->
+            <path d="M120,95 Q130,88 145,92" stroke="#5a2800" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.6"/>
+ 
+            <!-- EYEBROWS (elegant arched) -->
+            <path d="M112,138 Q122,130 132,135" stroke="#3d1a00" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+            <path d="M148,135 Q158,130 168,138" stroke="#3d1a00" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+ 
+            <!-- EYES (big, feminine) -->
+            <ellipse cx="122" cy="150" rx="11" ry="12" fill="white"/>
+            <ellipse cx="158" cy="150" rx="11" ry="12" fill="white"/>
+            <!-- Eyelid shadow -->
+            <ellipse cx="122" cy="142" rx="11" ry="5" fill="#f0a080" opacity="0.25"/>
+            <ellipse cx="158" cy="142" rx="11" ry="5" fill="#f0a080" opacity="0.25"/>
+            <!-- Iris -->
+            <circle cx="122" cy="151" r="8" fill="#3a1800"/>
+            <circle cx="158" cy="151" r="8" fill="#3a1800"/>
+            <!-- Pupil -->
+            <circle cx="122" cy="151" r="4.5" fill="#0d0800"/>
+            <circle cx="158" cy="151" r="4.5" fill="#0d0800"/>
+            <!-- Eye shine (double sparkle) -->
+            <circle cx="125" cy="147" r="2.2" fill="white"/>
+            <circle cx="161" cy="147" r="2.2" fill="white"/>
+            <circle cx="119" cy="153" r="1" fill="white" opacity="0.7"/>
+            <circle cx="155" cy="153" r="1" fill="white" opacity="0.7"/>
+            <!-- Eyelashes top -->
+            <path d="M111,144 Q114,139 117,143" stroke="#1a0a00" stroke-width="1.2" fill="none"/>
+            <path d="M127,140 Q130,135 133,140" stroke="#1a0a00" stroke-width="1.2" fill="none"/>
+            <path d="M147,140 Q150,135 153,140" stroke="#1a0a00" stroke-width="1.2" fill="none"/>
+            <path d="M163,140 Q166,135 169,143" stroke="#1a0a00" stroke-width="1.2" fill="none"/>
+ 
+            <!-- BLUSH -->
+            <ellipse cx="107" cy="167" rx="10" ry="6" fill="#ffb0a0" opacity="0.3"/>
+            <ellipse cx="173" cy="167" rx="10" ry="6" fill="#ffb0a0" opacity="0.3"/>
+ 
+            <!-- NOSE (delicate) -->
+            <path d="M137,163 Q140,170 143,163" stroke="#c07040" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+ 
+            <!-- MOUTH (lipstick smile) -->
+            <path d="M127,180 Q140,194 153,180" stroke="#e05060" stroke-width="2.5" fill="rgba(224,80,96,0.15)" stroke-linecap="round"/>
+            <path d="M129,180 Q140,183 151,180" stroke="#e05060" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+ 
+            <!-- HAIR ACCESSORY (green star clip) -->
+            <polygon points="164,104 166,110 172,110 167,114 169,120 164,116 159,120 161,114 156,110 162,110" fill="#00ff88" opacity="0.85"/>
+            <circle cx="164" cy="112" r="3" fill="white" opacity="0.5"/>
+ 
+            <!-- LAPTOP -->
+            <rect x="102" y="254" width="76" height="5" rx="2" fill="#111"/>
+            <rect x="110" y="232" width="60" height="38" rx="3" fill="#1a1a1a"/>
+            <rect x="112" y="234" width="56" height="34" rx="2" fill="#0a1a0d"/>
+            <!-- Code on screen -->
+            <rect x="115" y="238" width="20" height="2" rx="1" fill="#00ff88" opacity="0.9"/>
+            <rect x="115" y="243" width="32" height="2" rx="1" fill="#00cc66" opacity="0.6"/>
+            <rect x="119" y="248" width="16" height="2" rx="1" fill="#00ff88" opacity="0.8"/>
+            <rect x="115" y="253" width="26" height="2" rx="1" fill="#00cc66" opacity="0.5"/>
+            <rect x="119" y="258" width="12" height="2" rx="1" fill="#00ff88" opacity="0.9"/>
+            <!-- Cursor blink -->
+            <rect x="131" y="258" width="2" height="8" rx="1" fill="#00ff88">
+              <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+            </rect>
+ 
+            <!-- ARMS -->
+            <path d="M108,215 Q90,228 88,248" stroke="#d4905a" stroke-width="16" fill="none" stroke-linecap="round"/>
+            <path d="M172,215 Q190,228 192,248" stroke="#d4905a" stroke-width="16" fill="none" stroke-linecap="round"/>
+ 
+            <!-- GLOW ring around avatar -->
+            <ellipse cx="140" cy="155" rx="62" ry="67" fill="none" stroke="rgba(0,255,136,0.07)" stroke-width="10"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-label reveal">Who I Am</div>
+  <h2 class="section-title reveal">About Me</h2>
+  <div class="about-grid">
+    <div class="reveal from-left">
+      
+      <p class="about-p">
+I'm <strong>Asmi Singh</strong>, a Computer Science Engineering student at VIT Chennai passionate about full-stack development, AI-driven applications, and problem solving.
+
+I enjoy building practical projects, exploring modern technologies, and continuously improving my development skills through hands-on learning.
+
+Currently, I am seeking internship opportunities to apply my technical knowledge and gain industry experience.
+</p>
+      <br>
+      <a href="#contact" class="btn-outline-g" style="display:inline-block;margin-top:.5rem;">Let's Talk →</a>
+    </div>
+    <div class="about-card reveal from-right">
+      <div class="info-item"><div class="info-key">Location</div><div class="info-val">Chennai, India</div></div>
+      <div class="info-item"><div class="info-key">Currently at</div><div class="info-val">VIT, Chennai (Student)</div></div>
+      <div class="info-item"><div class="info-key">Education</div><div class="info-val">B.Tech CSE</div></div>
+      <div class="info-item"><div class="info-key">Email</div><div class="info-val" style="color:var(--green);">asmisingh21@gmail.com</div></div>
+      <div class="info-item"><div class="info-key">Status</div><div class="info-val" style="color:var(--green);">Actively seeking internships ✦</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-label reveal">What I Know</div>
+  <h2 class="section-title reveal">Skills</h2>
+  <div class="skills-grid">
+    <div class="skill-card reveal"><div class="skill-icon">⚡</div><div class="skill-card-title">Frontend</div><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">React.js</span><span class="tag">Framer Motion</span></div></div>
+    <div class="skill-card reveal"><div class="skill-icon">🔧</div><div class="skill-card-title">Backend</div><div class="tags"><span class="tag">Node.js</span><span class="tag">Express.js</span><span class="tag">Python</span><span class="tag">Laravel</span><span class="tag">REST APIs</span></div></div>
+    <div class="skill-card reveal"><div class="skill-icon">🗄️</div><div class="skill-card-title">Database</div><div class="tags"><span class="tag">PostgreSQL</span><span class="tag">MongoDB</span><span class="tag">MySQL</span></div></div>
+    <div class="skill-card reveal"><div class="skill-icon">🛠️</div><div class="skill-card-title">Tools</div><div class="tags"><span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">VS Code</span><span class="tag">Linux</span></div></div>
+    <div class="skill-card reveal"><div class="skill-icon">💻</div><div class="skill-card-title">Programming Languages</div><div class="tags"><span class="tag">C</span>
+    <span class="tag">C++</span>
+    <span class="tag">Java</span>
+    <span class="tag">Python</span>
+    <span class="tag">JavaScript</span>
+  </div>
+</div>
+
+<div class="skill-card reveal">
+  <div class="skill-icon">📚</div>
+  <div class="skill-card-title">CS Fundamentals</div>
+  <div class="tags">
+    <span class="tag">DSA</span>
+    <span class="tag">OOPs</span>
+    <span class="tag">DBMS</span>
+    <span class="tag">Operating Systems</span>
+    <span class="tag">Computer Networks</span>
+  </div>
+</div>
+  
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="section-label reveal">What I've Built</div>
+  <h2 class="section-title reveal">Projects</h2>
+  <div class="projects-grid">
+    <div class="project-card reveal"><div class="project-num">01 /</div><h3 class="project-name">ASL Sign Language Recognition System</h3><p class="project-desc">A real-time computer vision system that detects and classifies American Sign Language (ASL) alphabets using deep learning. The model processes hand gestures through webcam input and translates them into corresponding text for improved accessibility and communication support.</p><div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">OpenCV</span><span class="stack-tag">TensorFlow</span><span class="stack-tag">MediaPipe</span></div><a href="#" class="project-link">View Project →</a></div>
+    <div class="project-card reveal"><div class="project-num">02 /</div><h3 class="project-name">Personal Portfolio Website</h3><p class="project-desc">A responsive developer portfolio website designed and built to showcase projects, skills, and achievements. It features a clean UI, smooth navigation, and project-based layout optimized for recruiters and internship applications.</p><div class="project-stack"><span class="stack-tag">HTML</span><span class="stack-tag">CSS</span><span class="stack-tag">JavaScript</span></div><a href="#" class="project-link">Live Demo →</a></div>
+    <div class="project-card reveal">
+  <div class="project-num">03 /</div>
+
+  <h3 class="project-name">
+    Patent Published – Intelligent Assistive Navigation Stick
+  </h3>
+
+  <p class="project-desc">
+    Developed an AI-powered smart assistive stick for visually impaired individuals featuring real-time object detection, OCR-based text reading, traffic signal recognition, GPS-GSM emergency tracking, and voice-guided navigation using OpenCV and Raspberry Pi.
+  </p>
+
+  <div class="project-stack">
+    <span class="stack-tag">OpenCV</span>
+    <span class="stack-tag">Raspberry Pi</span>
+    <span class="stack-tag">OCR</span>
+    <span class="stack-tag">IoT</span>
+    <span class="stack-tag">Embedded Systems</span>
+  </div>
+
+  <a href="#" class="project-link">Patent Details →</a>
+</div>
+  </div>
+</section>
+
+<!-- POSITIONS OF RESPONSIBILITY -->
+<section id="positions">
+  <div class="section-label reveal">Leadership</div>
+  <h2 class="section-title reveal">Positions of Responsibility</h2>
+  <div class="positions-grid">
+
+    <div class="position-card reveal">
+      <div class="position-header">
+        <div>
+          <div class="position-role">President</div>
+          <div class="position-org">Sangam Club</div>
+        </div>
+        <div class="position-badge">Club</div>
+      </div>
+      <p class="position-desc">Leading the club's initiatives, managing team coordination, and organizing cultural and social events for the student community at VIT Chennai.</p>
+    </div>
+
+    <div class="position-card reveal">
+      <div class="position-header">
+        <div>
+          <div class="position-role">Project Member</div>
+          <div class="position-org">GirlUp Club</div>
+        </div>
+        <div class="position-badge">Club</div>
+      </div>
+      <p class="position-desc">Contributing to projects that promote gender equality and women's empowerment through awareness campaigns and community-driven initiatives.</p>
+    </div>
+
+    <div class="position-card reveal">
+      <div class="position-header">
+        <div>
+          <div class="position-role">Member</div>
+          <div class="position-org">Quantumplators</div>
+        </div>
+        <div class="position-badge">Special Team</div>
+      </div>
+      <p class="position-desc">Collaborating with a specialized team on technical problem-solving, research activities, and interdisciplinary projects.</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="section-label reveal">Credentials</div>
+  <h2 class="section-title reveal">Certifications</h2>
+  <div class="certs-grid">
+
+    <!-- Add / remove cards as needed -->
+    <div class="cert-card reveal">
+      <div class="cert-icon">🏅</div>
+      <div class="cert-name">Your Certification Name</div>
+      <div class="cert-issuer">Issuing Organization</div>
+      <div class="cert-year">2024</div>
+    </div>
+
+    <div class="cert-card reveal">
+      <div class="cert-icon">🏅</div>
+      <div class="cert-name">Your Certification Name</div>
+      <div class="cert-issuer">Issuing Organization</div>
+      <div class="cert-year">2024</div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <span style="color:var(--green);">Crafted with passion & code ✦</span>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
